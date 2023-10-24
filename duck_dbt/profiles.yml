@@ -1,0 +1,12 @@
+duck_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '../databases/dev.db'
+  
+  target: production
+  outputs:
+    production:
+      type: duckdb
+      path: '../databases.production.db'
