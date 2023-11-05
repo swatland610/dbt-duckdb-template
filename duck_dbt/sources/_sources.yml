@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: bls
+    database: raw  
+    schema: bls  
+    tables:
+      - name: unemployment_rates

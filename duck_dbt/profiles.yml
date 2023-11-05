@@ -3,10 +3,10 @@ duck_dbt:
   outputs:
     dev:
       type: duckdb
-      path: '../databases/dev.db'
-  
-  target: production
-  outputs:
-    production:
-      type: duckdb
-      path: '../databases.production.db'
+      path: ../databases/dev.db
+      alias: dev
+      attach:
+        - path: ../databases/raw.db
+          alias: raw
+        - path: ../databases/production.db
+          alias: prod
